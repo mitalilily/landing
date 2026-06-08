@@ -1,16 +1,30 @@
 import { Button, Drawer, IconButton } from "@mui/material";
 import { CloseRounded, MenuRounded, NorthEastRounded } from "@mui/icons-material";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import LogoMark from "../brand/LogoMark";
 import { navLinks } from "../../data/siteData";
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const updateHeaderState = () => {
+      setIsScrolled(window.scrollY > 12);
+    };
+
+    updateHeaderState();
+    window.addEventListener("scroll", updateHeaderState, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", updateHeaderState);
+    };
+  }, []);
 
   return (
     <>
-      <header className="site-header">
+      <header className={`site-header ${isScrolled ? "site-header--scrolled" : ""}`.trim()}>
         <div className="container-shell site-header__inner">
           <Link className="brand-link" to="/">
             <LogoMark compact />
@@ -47,6 +61,7 @@ export default function Navbar() {
               Get Started
             </Button>
             <IconButton
+              aria-label="Open navigation menu"
               className="site-header__menu"
               color="primary"
               onClick={() => setMobileOpen(true)}
