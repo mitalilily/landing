@@ -4,6 +4,7 @@ import LoadingCard from "../components/common/LoadingCard";
 import MotionFade from "../components/common/MotionFade";
 import PageHero from "../components/common/PageHero";
 import SectionHeading from "../components/common/SectionHeading";
+import LogisticsMapVisual from "../components/common/LogisticsMapVisual";
 import CourierOptionCard from "../components/rates/CourierOptionCard";
 import { defaultRateForm, pageArtwork, paymentModes, rateGuideSteps } from "../data/siteData";
 import { requestRateQuote } from "../services/api";
@@ -146,7 +147,7 @@ export default function RateCalculatorPage() {
         <div className="container-shell guide-layout">
           <MotionFade className="guide-layout__visual" delay={0.06}>
             <div className="illustration-panel">
-              <img alt={pageArtwork.rateGuide.alt} className="illustration-panel__image" src={pageArtwork.rateGuide.src} />
+              <LogisticsMapVisual compact variant="rates" />
             </div>
           </MotionFade>
 

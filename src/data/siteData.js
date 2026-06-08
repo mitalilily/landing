@@ -17,9 +17,10 @@ export const brand = {
 export const navLinks = [
   { label: "Home", to: "/" },
   { label: "Tracking", to: "/tracking" },
-  { label: "Rate Calculator", to: "/rate-calculator" },
-  { label: "Weight Calculator", to: "/weight-calculator" },
+  { label: "Rates", to: "/rate-calculator" },
+  { label: "Weight", to: "/weight-calculator" },
   { label: "Contact", to: "/contact" },
+  { label: "Login", to: "/login" },
 ];
 
 export const heroHighlights = [
@@ -319,32 +320,16 @@ export const trackingSamples = [
 
 export const pageArtwork = {
   weightHero: {
-    src: "/page-art/weight1-clean.png",
+    variant: "weight",
     alt: "Courier measuring a parcel for volumetric weight.",
   },
-  weightGuide: {
-    src: "/page-art/weight2-clean.png",
-    alt: "Parcel dimension guide showing length, breadth, and height.",
-  },
   trackingHero: {
-    src: "/page-art/tracking-custom-side.webp",
+    variant: "tracking",
     alt: "Shipping tracking illustration with parcel and phone.",
-    className: "page-art--plain tracking-art-image",
-  },
-  trackingAside: {
-    src: "/page-art/tracking-custom-hero.png",
-    alt: "Customer viewing shipment tracking updates on a mobile app.",
-    className: "page-art--plain tracking-art-image tracking-art-image--side",
   },
   rateHero: {
-    src: "/page-art/rate-custom-hero.jpg",
+    variant: "rates",
     alt: "Calculator-themed shipping illustration.",
-    className: "page-art--plain rate-art-image rate-art-image--hero",
-  },
-  rateGuide: {
-    src: "/page-art/rate-custom-side.gif",
-    alt: "Mobile calculator animation for shipping rates.",
-    className: "page-art--plain rate-art-image rate-art-image--side",
   },
 };
 

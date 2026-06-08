@@ -7,9 +7,16 @@ export default function LogoMark({ compact = false }) {
       className={`logo-lockup ${compact ? "logo-lockup--compact" : ""}`.trim()}
     >
       <span className={`logo-mark ${compact ? "logo-mark--compact" : ""}`.trim()} aria-hidden="true">
-        IX
+        <span className="logo-mark__globe" />
+        <span className="logo-mark__orbit" />
       </span>
-      <span className="logo-word">{brand.name}</span>
+      <span className="logo-text">
+        <span className="logo-word">
+          <span>Intle</span>
+          <strong>xpress</strong>
+        </span>
+        {!compact ? <span className="logo-tagline">Global Courier Solutions</span> : null}
+      </span>
     </div>
   );
 }

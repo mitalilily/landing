@@ -3,6 +3,7 @@ import { Alert, Paper, Slider, Stack, TextField, Typography } from "@mui/materia
 import MotionFade from "../components/common/MotionFade";
 import PageHero from "../components/common/PageHero";
 import SectionHeading from "../components/common/SectionHeading";
+import LogisticsMapVisual from "../components/common/LogisticsMapVisual";
 import WeightVisualizer from "../components/weight/WeightVisualizer";
 import { defaultWeightForm, pageArtwork, weightGuideSteps } from "../data/siteData";
 import { calculateVolumetricWeight, formatWeight, getBillableWeight } from "../utils/calculators";
@@ -56,11 +57,7 @@ export default function WeightCalculatorPage() {
         <div className="container-shell guide-layout">
           <MotionFade className="guide-layout__visual" delay={0.06}>
             <div className="illustration-panel">
-              <img
-                alt={pageArtwork.weightGuide.alt}
-                className="illustration-panel__image"
-                src={pageArtwork.weightGuide.src}
-              />
+              <LogisticsMapVisual compact variant="weight" />
             </div>
           </MotionFade>
 

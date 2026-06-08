@@ -5,6 +5,7 @@ import MotionFade from "../components/common/MotionFade";
 import PageHero from "../components/common/PageHero";
 import TrackingTimeline from "../components/tracking/TrackingTimeline";
 import SectionHeading from "../components/common/SectionHeading";
+import LogisticsMapVisual from "../components/common/LogisticsMapVisual";
 import { pageArtwork, trackingSamples } from "../data/siteData";
 import { searchTracking } from "../services/api";
 
@@ -90,7 +91,7 @@ export default function TrackingPage() {
 
           <MotionFade delay={0.08}>
             <div className="tracking-page__art">
-              <img alt={pageArtwork.trackingAside.alt} className="tracking-page__image" src={pageArtwork.trackingAside.src} />
+              <LogisticsMapVisual compact variant="tracking" />
             </div>
           </MotionFade>
         </div>

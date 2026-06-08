@@ -1,17 +1,12 @@
 import { Button, Drawer, IconButton } from "@mui/material";
 import { CloseRounded, MenuRounded, NorthEastRounded } from "@mui/icons-material";
 import { useState } from "react";
-import { Link, NavLink, useLocation } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import LogoMark from "../brand/LogoMark";
 import { navLinks } from "../../data/siteData";
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const { pathname } = useLocation();
-
-  if (pathname === "/") {
-    return null;
-  }
 
   return (
     <>
@@ -37,10 +32,10 @@ export default function Navbar() {
             <Button
               className="button-ghost"
               component={Link}
-              to="/login"
+              to="/contact"
               variant="outlined"
             >
-              Demo Login
+              Book Demo
             </Button>
             <Button
               className="button-primary"
@@ -49,7 +44,7 @@ export default function Navbar() {
               to="/rate-calculator"
               variant="contained"
             >
-              Start Shipping
+              Get Started
             </Button>
             <IconButton
               className="site-header__menu"
@@ -94,7 +89,7 @@ export default function Navbar() {
             to="/rate-calculator"
             variant="contained"
           >
-            Start Shipping
+            Get Started
           </Button>
         </div>
       </Drawer>

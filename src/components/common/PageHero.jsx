@@ -1,8 +1,18 @@
 import MotionFade from "./MotionFade";
+import LogisticsMapVisual from "./LogisticsMapVisual";
 
 export default function PageHero({ badge, title, description, caption, artwork }) {
   const hasArtwork = Boolean(artwork?.src);
-  const plainArtwork = artwork?.className?.includes("page-art--plain");
+  const visualVariant = artwork?.variant ?? (!hasArtwork ? "support" : "");
+  const hasVisual = Boolean(visualVariant);
+  const plainArtwork = Boolean(artwork?.plain);
+  const mediaCardClassName = [
+    "page-hero__media-card",
+    plainArtwork ? "page-hero__media-card--plain" : "",
+    hasVisual ? "page-hero__media-card--visual" : "",
+  ]
+    .filter(Boolean)
+    .join(" ");
 
   return (
     <section className="page-hero">
@@ -16,14 +26,18 @@ export default function PageHero({ badge, title, description, caption, artwork }
           <p className="page-hero__description">{description}</p>
         </MotionFade>
 
-        {hasArtwork ? (
+        {hasVisual || hasArtwork ? (
           <MotionFade className="page-hero__media" delay={0.08}>
-            <div className={`page-hero__media-card ${plainArtwork ? "page-hero__media-card--plain" : ""}`.trim()}>
-              <img
-                alt={artwork.alt}
-                className={`page-hero__image ${artwork.className ?? ""}`.trim()}
-                src={artwork.src}
-              />
+            <div className={mediaCardClassName}>
+              {hasVisual ? (
+                <LogisticsMapVisual variant={visualVariant} />
+              ) : (
+                <img
+                  alt={artwork.alt}
+                  className={`page-hero__image ${artwork.className ?? ""}`.trim()}
+                  src={artwork.src}
+                />
+              )}
             </div>
           </MotionFade>
         ) : null}

@@ -4,28 +4,28 @@ const theme = createTheme({
   palette: {
     mode: "light",
     primary: {
-      main: "#5d2394",
-      dark: "#43166d",
-      light: "#7a3db4",
+      main: "#125cff",
+      dark: "#061b67",
+      light: "#2f8cff",
     },
     secondary: {
-      main: "#56e813",
-      dark: "#36b309",
-      light: "#8cf45a",
+      main: "#ef2638",
+      dark: "#c91527",
+      light: "#ff6a76",
     },
     success: {
-      main: "#1e9f5b",
+      main: "#00a986",
     },
     warning: {
       main: "#e2a000",
     },
     background: {
-      default: "#f7f5fb",
+      default: "#f7fbff",
       paper: "#ffffff",
     },
     text: {
-      primary: "#1d1730",
-      secondary: "#655c79",
+      primary: "#061844",
+      secondary: "#43577e",
     },
   },
   typography: {
@@ -33,17 +33,17 @@ const theme = createTheme({
     h1: {
       fontFamily: '"Space Grotesk", sans-serif',
       fontWeight: 700,
-      letterSpacing: "-0.05em",
+      letterSpacing: 0,
     },
     h2: {
       fontFamily: '"Space Grotesk", sans-serif',
       fontWeight: 700,
-      letterSpacing: "-0.04em",
+      letterSpacing: 0,
     },
     h3: {
       fontFamily: '"Space Grotesk", sans-serif',
       fontWeight: 700,
-      letterSpacing: "-0.03em",
+      letterSpacing: 0,
     },
     button: {
       fontWeight: 700,
