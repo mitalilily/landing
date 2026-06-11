@@ -7,6 +7,7 @@ const hotspots = [
   { label: "Resources", to: "/tracking", className: "reference-hero__hotspot--resources" },
   { label: "Company", to: "/contact", className: "reference-hero__hotspot--company" },
   { label: "Login", to: "/login", className: "reference-hero__hotspot--login" },
+  { label: "Start Shipping Now", to: "/login", className: "reference-hero__hotspot--main-cta" },
   { label: "Get Started", to: "/rate-calculator", className: "reference-hero__hotspot--top-cta" },
 ];
 
