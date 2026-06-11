@@ -1,6 +1,7 @@
 export const brand = {
   name: "Intlexpress",
-  logoAlt: "Intlexpress logo",
+  logoAlt: "Intlexpress globe logo",
+  logoSrc: "/brand/intlexpress-logo.png",
   phone: "+91 00000 00000",
   supportPhone: "+91 00000 00000",
   address: "India",
@@ -11,7 +12,7 @@ export const brand = {
   subheadline:
     "Compare courier partners, automate dispatch, and keep every delivery visible from one premium logistics dashboard.",
   heroBadge: "Smart shipping aggregator for modern commerce teams",
-  tagline: "The King of Shipping",
+  tagline: "Global Courier Solutions",
 };
 
 export const navLinks = [

@@ -1,22 +1,9 @@
 import { brand } from "../../data/siteData";
 
-export default function LogoMark({ compact = false }) {
+export default function LogoMark({ className = "", compact = false }) {
   return (
-    <div
-      aria-label={brand.logoAlt}
-      className={`logo-lockup ${compact ? "logo-lockup--compact" : ""}`.trim()}
-    >
-      <span className={`logo-mark ${compact ? "logo-mark--compact" : ""}`.trim()} aria-hidden="true">
-        <span className="logo-mark__globe" />
-        <span className="logo-mark__orbit" />
-      </span>
-      <span className="logo-text">
-        <span className="logo-word">
-          <span>Intle</span>
-          <strong>xpress</strong>
-        </span>
-        {!compact ? <span className="logo-tagline">Global Courier Solutions</span> : null}
-      </span>
+    <div className={`logo-lockup ${compact ? "logo-lockup--compact" : ""} ${className}`.trim()}>
+      <img alt={brand.logoAlt} className="logo-lockup__image" decoding="async" src={brand.logoSrc} />
     </div>
   );
 }

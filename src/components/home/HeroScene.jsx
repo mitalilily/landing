@@ -3,9 +3,9 @@ import {
   LocalShippingRounded,
   LocationOnRounded,
   RouteRounded,
-  StorefrontRounded,
 } from "@mui/icons-material";
 import { motion } from "framer-motion";
+import LogoMark from "../brand/LogoMark";
 
 const floatingTransition = {
   duration: 4.5,
@@ -23,8 +23,7 @@ export default function HeroScene() {
         transition={floatingTransition}
       >
         <div className="hero-scene__store-top">
-          <StorefrontRounded />
-          <span>Intlexpress</span>
+          <LogoMark className="hero-scene__brandmark" compact />
         </div>
         <div className="hero-scene__store-body">
           <div className="hero-scene__door" />

@@ -1,4 +1,4 @@
-import { Accordion, AccordionDetails, AccordionSummary } from "@mui/material";
+﻿import { Accordion, AccordionDetails, AccordionSummary } from "@mui/material";
 import {
   AutoAwesomeRounded,
   CurrencyRupeeRounded,
@@ -149,7 +149,7 @@ export default function HomePage() {
       <section className="landing-section landing-section--muted">
         <div className="container-shell testimonial-layout testimonial-layout--single">
           <MotionFade className="simple-section-heading">
-            <h2>Let’s See What Our Clients Say</h2>
+            <h2>Let's See What Our Clients Say</h2>
             <p>Social proof now sits later in the funnel, right before FAQ and final conversion actions.</p>
           </MotionFade>
           <div className="testimonial-grid">
