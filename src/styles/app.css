@@ -467,10 +467,10 @@ img {
   position: absolute;
   inset: 0 0 auto;
   z-index: 2;
-  height: 146px;
+  height: 84px;
   pointer-events: none;
   background:
-    linear-gradient(180deg, #ffffff 0%, #ffffff 62%, rgba(249, 252, 255, 0.92) 82%, rgba(249, 252, 255, 0) 100%);
+    linear-gradient(180deg, #ffffff 0%, #ffffff 52%, rgba(249, 252, 255, 0.86) 76%, rgba(249, 252, 255, 0) 100%);
 }
 
 .reference-hero__image {
