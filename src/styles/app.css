@@ -2830,15 +2830,15 @@ img {
   }
 
   .reference-hero {
-    height: 780px;
-    min-height: 780px;
+    height: 720px;
+    min-height: 720px;
   }
 
   .reference-hero__image {
-    width: 1260px;
-    max-width: none;
+    width: 100%;
+    max-width: 100%;
     object-fit: cover;
-    object-position: 22% top;
+    object-position: center top;
   }
 
   .reference-hero__hotspot--solutions,
@@ -2864,13 +2864,7 @@ img {
   .reference-hero__cta--main {
     left: 5%;
     top: 59.2%;
-    width: 38%;
-  }
-
-  .reference-hero__cta--demo {
-    left: 46%;
-    top: 59.2%;
-    width: 40%;
+    width: 44%;
   }
 
   .landing-hero {
@@ -2940,8 +2934,8 @@ img {
   }
 
   .reference-hero {
-    height: 680px;
-    min-height: 680px;
+    height: 560px;
+    min-height: 560px;
   }
 
   .reference-hero::after {
@@ -2955,9 +2949,9 @@ img {
   }
 
   .reference-hero__image {
-    width: 1040px;
+    width: 100%;
     left: 0;
-    object-position: 18% top;
+    object-position: center top;
   }
 
   .reference-hero__cta {
@@ -2967,12 +2961,7 @@ img {
   }
 
   .reference-hero__cta--main {
-    width: 41%;
-  }
-
-  .reference-hero__cta--demo {
-    left: 49%;
-    width: 43%;
+    width: 56%;
   }
 
   .reference-hero__cta-icon {
