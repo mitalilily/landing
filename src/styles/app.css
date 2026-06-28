@@ -462,6 +462,11 @@ img {
     linear-gradient(180deg, #f9fbff 0%, #eef4ff 100%);
 }
 
+.reference-hero__stage {
+  position: absolute;
+  inset: 0;
+}
+
 .reference-hero::before {
   content: "";
   position: absolute;
@@ -499,13 +504,11 @@ img {
 }
 
 .reference-hero__mobile-cta {
-  position: absolute;
-  left: 50%;
-  bottom: 28px;
-  z-index: 5;
+  position: relative;
+  z-index: 6;
   display: none;
+  margin: 18px auto 0;
   min-width: min(320px, calc(100% - 40px));
-  transform: translateX(-50%);
 }
 
 .reference-hero__hotspot:focus-visible {
@@ -2779,15 +2782,20 @@ img {
   }
 
   .reference-hero {
-    height: 720px;
-    min-height: 720px;
+    height: auto;
+    min-height: 0;
+    padding:
+      calc(var(--site-header-offset) + 12px)
+      min(24px, 4vw)
+      28px;
   }
 
-  .reference-hero__image {
-    width: 100%;
-    max-width: 100%;
-    object-fit: cover;
-    object-position: center top;
+  .reference-hero__stage {
+    position: relative;
+    inset: auto;
+    width: min(100%, 1080px);
+    margin: 0 auto;
+    aspect-ratio: 3 / 2;
   }
 
   .reference-hero__hotspot {
@@ -2800,6 +2808,13 @@ img {
 
   .reference-hero__card-glow {
     display: none;
+  }
+
+  .reference-hero__image {
+    width: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    object-position: center top;
   }
 
   .landing-hero {
@@ -2878,30 +2893,30 @@ img {
   }
 
   .reference-hero {
-    height: 560px;
-    min-height: 560px;
+    padding:
+      calc(var(--site-header-offset) + 8px)
+      12px
+      24px;
   }
 
   .reference-hero::after {
     content: "";
     position: absolute;
     inset: auto 0 0;
-    z-index: 2;
-    height: 34%;
+    z-index: 1;
+    height: 18%;
     pointer-events: none;
     background: linear-gradient(180deg, rgba(248, 251, 255, 0), rgba(248, 251, 255, 0.82));
   }
 
-  .reference-hero__image {
+  .reference-hero__stage {
     width: 100%;
-    left: 0;
-    object-position: center top;
   }
 
   .reference-hero__mobile-cta {
-    bottom: 20px;
     width: calc(100% - 24px);
     min-width: 0;
+    margin-top: 16px;
   }
 
   .reference-hero__pulse--map,

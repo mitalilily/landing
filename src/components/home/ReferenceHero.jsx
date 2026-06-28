@@ -26,36 +26,38 @@ const shimmerLines = [
 export default function ReferenceHero() {
   return (
     <section className="reference-hero" aria-label="Intlexpress smart courier network">
-      <img
-        alt="Intlexpress smart courier network hero with delivery route, van, live tracking cards, partner logos, and shipping calls to action."
-        className="reference-hero__image"
-        src="/hero/intlexpress-reference-hero.png"
-      />
-
-      <div className="reference-hero__motion-layer" aria-hidden="true">
-        {shimmerLines.map((className) => (
-          <span key={className} className={`reference-hero__shimmer ${className}`} />
-        ))}
-        {pulses.map((className) => (
-          <span key={className} className={`reference-hero__pulse ${className}`} />
-        ))}
-        <span className="reference-hero__van-glow" />
-        <span className="reference-hero__tail-light reference-hero__tail-light--one" />
-        <span className="reference-hero__tail-light reference-hero__tail-light--two" />
-        <span className="reference-hero__card-glow reference-hero__card-glow--tracking" />
-        <span className="reference-hero__card-glow reference-hero__card-glow--rate" />
-        <span className="reference-hero__card-glow reference-hero__card-glow--delivery" />
-        <span className="reference-hero__scan-line" />
-      </div>
-
-      {hotspots.map((hotspot) => (
-        <Link
-          key={hotspot.label}
-          aria-label={hotspot.label}
-          className={`reference-hero__hotspot ${hotspot.className}`}
-          to={hotspot.to}
+      <div className="reference-hero__stage">
+        <img
+          alt="Intlexpress smart courier network hero with delivery route, van, live tracking cards, partner logos, and shipping calls to action."
+          className="reference-hero__image"
+          src="/hero/intlexpress-reference-hero.png"
         />
-      ))}
+
+        <div className="reference-hero__motion-layer" aria-hidden="true">
+          {shimmerLines.map((className) => (
+            <span key={className} className={`reference-hero__shimmer ${className}`} />
+          ))}
+          {pulses.map((className) => (
+            <span key={className} className={`reference-hero__pulse ${className}`} />
+          ))}
+          <span className="reference-hero__van-glow" />
+          <span className="reference-hero__tail-light reference-hero__tail-light--one" />
+          <span className="reference-hero__tail-light reference-hero__tail-light--two" />
+          <span className="reference-hero__card-glow reference-hero__card-glow--tracking" />
+          <span className="reference-hero__card-glow reference-hero__card-glow--rate" />
+          <span className="reference-hero__card-glow reference-hero__card-glow--delivery" />
+          <span className="reference-hero__scan-line" />
+        </div>
+
+        {hotspots.map((hotspot) => (
+          <Link
+            key={hotspot.label}
+            aria-label={hotspot.label}
+            className={`reference-hero__hotspot ${hotspot.className}`}
+            to={hotspot.to}
+          />
+        ))}
+      </div>
 
       <Link className="reference-hero__mobile-cta landing-button landing-button--primary" to="/rate-calculator">
         Start Shipping
