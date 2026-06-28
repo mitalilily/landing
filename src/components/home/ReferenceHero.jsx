@@ -25,9 +25,9 @@ const shimmerLines = [
 
 export default function ReferenceHero() {
   return (
-    <section className="reference-hero" aria-label="IntleExpress smart courier network">
+    <section className="reference-hero" aria-label="Intlexpress smart courier network">
       <img
-        alt="IntleExpress smart courier network hero with delivery route, van, live tracking cards, partner logos, and shipping calls to action."
+        alt="Intlexpress smart courier network hero with delivery route, van, live tracking cards, partner logos, and shipping calls to action."
         className="reference-hero__image"
         src="/hero/intlexpress-reference-hero.png"
       />
@@ -56,6 +56,10 @@ export default function ReferenceHero() {
           to={hotspot.to}
         />
       ))}
+
+      <Link className="reference-hero__mobile-cta landing-button landing-button--primary" to="/rate-calculator">
+        Start Shipping
+      </Link>
     </section>
   );
 }
